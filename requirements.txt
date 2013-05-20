@@ -1,0 +1,2 @@
+-e git+git://github.com/evernote/evernote-sdk-python.git@master#egg=evernote
+Flask==0.9
