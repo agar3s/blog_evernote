@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Posts</title>
+    </head>
+  <body>
+    <div>
+      <h1>{{ note.title }}</h1>
+      <p>{{ note.content|safe }}</p>
+      <br>
+      <a href="{{ url_for('index')}}">back</a>
+    </div>
+  </body>
+</html>
