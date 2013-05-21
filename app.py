@@ -8,7 +8,7 @@ from evernote.edam.notestore import NoteStore
 app = Flask(__name__)
 
 #put your development token below
-dev_token = "your api key"
+dev_token = "your evernote API key"
 
 #load the client with the token
 client = EvernoteClient(token=dev_token)
@@ -37,7 +37,7 @@ def index():
 
 @app.route('/note/<guid>')
 def view_note(guid):
-    note = note_store.getNote(guid, withContent=True, withResourcesData=False, withResourcesRecognition=False, withResourcesAlternateData=False)
+    note = note_store.getNote(guid, True, False, False, False)
     note.updated = datetime.fromtimestamp(note.updated / 1e3)
     return render_template('note.html', note={'title':note.title, 'content':note.content, 'updated':note.updated.strftime('%Y/%m/%d')})
 
