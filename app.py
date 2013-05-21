@@ -7,8 +7,8 @@ from evernote.edam.notestore import NoteStore
 
 app = Flask(__name__)
 
-#put your development token below
-dev_token = "your evernote API key"
+#put your development token below obtain it in https://sandbox.evernote.com/api/DeveloperToken.action
+dev_token = "your developer token"
 
 #load the client with the token
 client = EvernoteClient(token=dev_token)
